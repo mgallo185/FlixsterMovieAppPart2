@@ -34,8 +34,8 @@ class MovieRecyclerViewAdapter(
         val movie = movies[position]
 
         holder.mItem = movie
-       // holder.mMovieTitle.text = movie.title
-        //holder.mMovieDescription.text = movie.author
+       holder.mMovieTitle.text = movie.title
+        holder.mMovieDescription.text = movie.description
 
         holder.mView.setOnClickListener {
             holder.mItem?.let { movie ->
