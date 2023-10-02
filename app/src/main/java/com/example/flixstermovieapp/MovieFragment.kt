@@ -13,7 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.RequestParams
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
+import org.json.JSONObject
 
 private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 class MovieFragment  : Fragment(), OnListFragmentInteractionListener{
@@ -62,7 +65,10 @@ class MovieFragment  : Fragment(), OnListFragmentInteractionListener{
 
                 //TODO - Parse JSON into Models
 
-                val models : List<Movie> = emptyList() // Fix me!
+                val moviesRawJSON : String = json.jsonObject.get("results").toString()
+                val gson = Gson()
+                val arrayMovieType = object : TypeToken<List<Movie>>() {}.type
+                val models : List<Movie> =gson.fromJson(moviesRawJSON, arrayMovieType) // Fix me!
                 recyclerView.adapter = MovieRecyclerViewAdapter(models, this@MovieFragment)
 
                 // Look for this in Logcat:

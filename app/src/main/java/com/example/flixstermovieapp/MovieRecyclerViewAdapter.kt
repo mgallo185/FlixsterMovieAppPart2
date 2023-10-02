@@ -3,8 +3,11 @@ package com.example.flixstermovieapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import org.w3c.dom.Text
 
 class MovieRecyclerViewAdapter(
 
@@ -26,6 +29,7 @@ class MovieRecyclerViewAdapter(
         val mMovieTitle: TextView = mView.findViewById<View>(R.id.movietitle) as TextView
 
         val mMovieDescription: TextView = mView.findViewById<View>(R.id.moviedescription) as TextView
+        val mMovieImage: ImageView = mView.findViewById<View>(R.id.poster) as ImageView
         override fun toString(): String {
             return mMovieTitle.toString() + " '" + mMovieDescription.text + "'"
         }
@@ -37,6 +41,12 @@ class MovieRecyclerViewAdapter(
        holder.mMovieTitle.text = movie.title
         holder.mMovieDescription.text = movie.description
 
+
+
+        Glide.with(holder.mView)
+            .load("https://image.tmdb.org/t/p/w500/"+movie.movieImageUrl)
+            .centerInside()
+            .into(holder.mMovieImage)
         holder.mView.setOnClickListener {
             holder.mItem?.let { movie ->
                 mListener?.onItemClick(movie)

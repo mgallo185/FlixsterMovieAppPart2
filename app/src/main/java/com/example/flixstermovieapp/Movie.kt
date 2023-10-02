@@ -7,6 +7,10 @@ class Movie {
     @SerializedName("title")
     var title: String? = null
 
-    @JvmField @SerializedName("description")
+    @JvmField
+    @SerializedName("overview")
     var description: String? = null
+
+    @SerializedName("poster_path")
+    var movieImageUrl: String? = null
 }
