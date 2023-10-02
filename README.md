@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='FlixsterApp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='popcornplaceholder.png' title= 'Placeholder screencap' width=''  />
+<img src='popcornplaceholder.png' title= 'Placeholder screencap' width='' alt='placeholder screencap' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  [ScreenToGif](https://www.screentogif.com/) for Windows
