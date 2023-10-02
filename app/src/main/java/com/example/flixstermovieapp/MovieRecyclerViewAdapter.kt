@@ -46,6 +46,7 @@ class MovieRecyclerViewAdapter(
         Glide.with(holder.mView)
             .load("https://image.tmdb.org/t/p/w500/"+movie.movieImageUrl)
             .centerInside()
+            .placeholder(R.drawable.popcorn_clipart_md)
             .into(holder.mMovieImage)
         holder.mView.setOnClickListener {
             holder.mItem?.let { movie ->
