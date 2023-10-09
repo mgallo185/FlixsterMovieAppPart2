@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 class MovieRecyclerViewAdapter(
 
@@ -45,6 +46,7 @@ class MovieRecyclerViewAdapter(
         Glide.with(holder.mView)
             .load("https://image.tmdb.org/t/p/w500/"+movie.movieImageUrl)
             .centerInside()
+            .transform(RoundedCorners(20))
             .placeholder(R.drawable.popcorn_clipart_md)
             .into(holder.mMovieImage)
         holder.mView.setOnClickListener {
