@@ -32,10 +32,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='FlixsterAppPart2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src=FlixsterAppPart2.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- [ScreenToGif](https://www.screentogif.com/) for Windows -->
-GIF created with ...  
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Window
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
