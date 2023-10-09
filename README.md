@@ -15,6 +15,7 @@ The following **required** functionality is completed:
 - [x] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
 - [x] **Use Glide to load and display at least one image per entry**
 - [x] **Click on an entry to view specific details about that entry using Intents**
+ 3 details: release date, language, backdropImage
 
 The following **optional** features are implemented:
 
