@@ -1,5 +1,7 @@
 package com.example.flixstermovieapp
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -43,11 +45,12 @@ class MovieFragment  : Fragment(), OnListFragmentInteractionListener{
         val client= AsyncHttpClient()
         val params = RequestParams()
         params["api_key"] = API_KEY
+        //params["region"] = "US"
 
         // Using the client, perform the HTTP request
         // Using the client, perform the HTTP request
         client[
-            "https://api.themoviedb.org/3/movie/now_playing",
+            "https://api.themoviedb.org/3/movie/top_rated",
             params,
             object : JsonHttpResponseHandler()
 
@@ -102,8 +105,17 @@ class MovieFragment  : Fragment(), OnListFragmentInteractionListener{
     /*
      * What happens when a particular book is clicked.
      */
+
     override fun onItemClick(item: Movie) {
-        Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+        val intent = Intent(context, DetailActivity::class.java)
+        intent.putExtra("poster_path",item.movieImageUrl)
+        intent.putExtra("title", item.title)
+        intent.putExtra("overview", item.description)
+        intent.putExtra("release_date", item.releaseDate)
+        intent.putExtra("original_language", item.olanguage)
+        intent.putExtra("backdrop_path",item.backdrop )
+      startActivity(intent)
+
     }
 
 }

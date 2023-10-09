@@ -50,5 +50,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.12.0")
     // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
 
 }
